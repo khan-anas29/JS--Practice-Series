@@ -34,6 +34,21 @@ container.addEventListener("mousemove",
         // Adding image to div
         div.appendChild(img)
 
+        // Adding animation using gsap
+        // bringing img
+        gsap.to(img,{
+            y:"0",
+            duration:0.6,
+            ease: Power2,
+        })
+
+        // sending back img
+        gsap.to(img,{
+            y:"100%",
+            delay: 0.7,
+            ease: Power2,
+        })
+
         // clear it after some time
         setTimeout(function(){
             div.remove()

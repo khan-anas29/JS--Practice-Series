@@ -16,5 +16,12 @@ html,body{
     width: 60%;
     height: 40%;
     background-color: tomato;    
+}
 
+.imagediv{
+    height: 200px;
+    width: 150px;
+    background: black;
+    position: absolute;
+    overflow: hidden;
 }

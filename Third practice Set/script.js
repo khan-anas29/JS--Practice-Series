@@ -15,7 +15,21 @@ const throttleFunction = (func, delay) => {
 
 
 container.addEventListener("mousemove",
-    throttleFunction(() => {
+    throttleFunction((details) => {
+        // Creating a div
+        var div=document.createElement("div")
+        // Add class to it
+        div.classList.add("imagediv")
+        // Declare the position wrt container
+        div.style.left = details.clientX +"px"
+        div.style.top = details.clientY +"px"
+        // add it to body
+        document.body.appendChild(div)
+
+        // clear it after some time
+        setTimeout(function(){
+            div.remove()
+        },1500)
         
     }, 500));
 
